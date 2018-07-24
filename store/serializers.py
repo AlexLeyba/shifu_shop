@@ -3,7 +3,7 @@ from store.models import Product
 
 
 class ProductSerializer(serializers.ModelSerializer):
-    """Сериализаияя товаров"""
+    """Сериализация товаров"""
     class Meta:
         model = Product
         fields = ("name", "price", "description")
