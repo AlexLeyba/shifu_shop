@@ -1,11 +1,18 @@
 import React, { Component } from 'react'
-import { render } from 'react-dom'
-import { Redirect, Link } from 'react-router-dom'
+import { Route, Redirect, Switch } from 'react-router-dom'
+import Itemslist from './Itemslist'
 
-export default function Home() {
-	return (
-		<div>
-			<h1>Hello world</h1>
-		</div>
-	)
+export default class Home extends Component {
+	constructor() {
+		super()
+
+		let positions = JSON.parse(localStorage.getItem('positions'))
+		this.state = { positions: positions }
+	}
+
+	render() {
+		return(
+			<Itemslist list={this.state.positions} />
+		)
+	}
 }

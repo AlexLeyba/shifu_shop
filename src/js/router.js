@@ -6,49 +6,18 @@ export default function Rout() {
 	return (
 	<Router>
 		<div>
-			<div className='p-3 px-md-4 mb-3 border-bottom box-shadow'>
-				<nav>
-					<Link className='p-2 text-dark' to="/">Home</Link>
-				</nav>
-			</div>
-		
+			<div className='d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow'>
+					<h5 className='my-1 mr-md-auto font-weight-normal'>Shifu-shop</h5>
+					<div className='my-2 my-md-0 mr-md-3'>
+						<Link to='/' className='p-2 text-dark'>Home</Link>
+					</div>
+				</div>
+
 			<Switch>
-				<Route exact path="/" component={Home} />
+				<Route exact path='/' component={ Home } />
 				<Redirect to='/'/>
 			</Switch>
 		</div>
 	</Router>
 	)
 }
-
-/*
-import React from 'react'
-import { BrowserRouter as Router, Route, Link, Redirect, Switch } from 'react-router-dom'
-import ElementAdd from './components/adminpage/ElementAdd'
-import Admin from './components/adminpage/Admin'
-import Home from './components/Home'
-
-function Rout() {
-	return (
-	<Router>
-		<div>
-			<div className='p-3 px-md-4 mb-3 border-bottom box-shadow'>
-				<nav>
-					<Link className='p-2 text-dark' to="/">Home</Link>
-					<Link className='p-2 text-dark' to="/admin">Admin</Link>
-				</nav>
-			</div>
-		
-			<Switch>
-				<Route exact path="/" component={Home} />
-				<Route path="/admin" component={Admin} />
-				<Route path="/admin/add" component={ElementAdd} />
-				<Redirect to='/'/>
-			</Switch>
-		</div>
-	</Router>
-	)
-};
-
-export default Rout
-*/
