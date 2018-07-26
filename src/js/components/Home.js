@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
-import { Route, Redirect, Switch } from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
 import Itemslist from './Itemslist'
+import Itempage from './Itempage'
 
 export default class Home extends Component {
 	constructor() {
@@ -12,7 +13,10 @@ export default class Home extends Component {
 
 	render() {
 		return(
-			<Itemslist list={this.state.positions} />
+			<Switch>
+				<Itemslist list={this.state.positions} />
+				<Route path='/home/item/:index' render={() => (<Itempage /> )}/> //поправить роут
+			</Switch>
 		)
 	}
 }

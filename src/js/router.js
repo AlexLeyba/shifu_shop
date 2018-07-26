@@ -1,6 +1,7 @@
 import React from 'react'
 import { BrowserRouter as Router, Route, Link, Redirect, Switch } from 'react-router-dom'
 import Home from './components/Home'
+import Itempage from './components/Itempage'
 
 export default function Rout() {
 	return (
@@ -15,6 +16,7 @@ export default function Rout() {
 
 			<Switch>
 				<Route exact path='/' component={ Home } />
+				<Route path='/item/0' component={ Itempage } /> //тест роута
 				<Redirect to='/'/>
 			</Switch>
 		</div>

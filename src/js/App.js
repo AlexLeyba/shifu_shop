@@ -10,8 +10,10 @@ import Rout from './router'
 const store = createStore(rootReducer)
 
 localStorage.setItem('positions', JSON.stringify([
-	{"id": "qwerty", "name": "debug tweet1", "content": "content1"},
-	{"id": "qwertyu", "name": "debug tweet2", "content": "content2"}
+	{"id": "qwerty", "name": "debug tweet1", "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin enim eros, hendrerit ut congue id, sollicitudin ut odio. Nullam quis ex ac quam consequat suscipit eget ut orci."},
+	{"id": "qwertyu", "name": "debug tweet2", "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin enim eros, hendrerit ut congue id, sollicitudin ut odio. Nullam quis ex ac quam consequat suscipit eget ut orci.2"},
+	{"id": "qwertyui", "name": "debug tweet3", "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin enim eros, hendrerit ut congue id, sollicitudin ut odio. Nullam quis ex ac quam consequat suscipit eget ut orci.3"},
+	{"id": "qwertyi", "name": "debug tweet4", "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin enim eros, hendrerit ut congue id, sollicitudin ut odio. Nullam quis ex ac quam consequat suscipit eget ut orci.4"}
 ]))
 
 render (
