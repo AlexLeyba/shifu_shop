@@ -6,7 +6,7 @@ let JavaScriptObfuscator = require('webpack-obfuscator');
 
 let config = {
 	entry: {
-		app: './src/js/App.js'
+		app: './src/App.js',
 	},
 	output: {
 		path: path.resolve(__dirname, './dist'),
@@ -16,6 +16,7 @@ let config = {
 		rules: [
 			{
 				test: /\.js$/,
+				exclude: /node_modules/,
 				loader: 'babel-loader',
 			},
 			{
@@ -34,7 +35,7 @@ let devConfig = {
 			index: '/'
 		},
 		overlay: true,		
-		port: 3000
+		port: 3001
 	},
 	plugins: [
 		new ExtractTextPlugin("style.css"),

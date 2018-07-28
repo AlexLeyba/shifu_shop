@@ -1,8 +1,15 @@
-import { combineReducers } from 'redux'
-import Usersreducer from './Usersreducer'
+import {combineReducers} from 'redux'
+import {routerReducer} from 'react-router-redux'
 
-let reducer = combineReducers({
-	user: Usersreducer
+import phones from './phones'
+import phonesPage from './phonesPage'
+import phonePage from './phonePage'
+import basket from './basket'
+
+export default combineReducers({
+  routing: routerReducer,
+  phones,
+  phonesPage,
+  phonePage,
+  basket
 })
-
-export default reducer
