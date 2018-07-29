@@ -5,9 +5,9 @@ import phones from './mockPhones'
 
 export const fetchPhones = async () => {
   const {body} = await request.get(
-    'http://www.mocky.io/v2/5b5ca7dd3200007600426347'
+    'http://78.140.221.46/api/product-list/?format=json'
   )
-  return body.data
+  return body
 }
 
 export const fetchPhoneById = async (id) => {
