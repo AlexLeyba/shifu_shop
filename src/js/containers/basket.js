@@ -34,7 +34,7 @@ const Basket = ({
                 <td>
                   <img className='delete-cart'
                     onClick={() => removePhoneFromBasket(phone.id)} 
-                    src='../public/images/trash_16x16.gif' 
+                    src='./public/images/trash_16x16.gif' 
                   />
                 </td>
               </tr>
