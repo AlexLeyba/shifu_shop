@@ -13,7 +13,7 @@ class Phones extends Component {
 
   renderPhone (phone, index) {
     const {addPhoneToBasket} = this.props
-    const shortDescription = `${R.take(60, phone.description)}...`
+    const shortDescription = `${R.take(60, phone.description)}`
 
     return (
       <div className='col-sm-4 col-lg-4 col-md-4 book-list' key={index}>
@@ -26,7 +26,7 @@ class Phones extends Component {
                 {phone.name}
               </Link>
             </h4>
-            <p>{shortDescription}</p>
+            <p>{shortDescription}{ phone.description > shortDescription ? '...' : ''}</p>
             <p className='itemButton'>
               <button className='btn btn-primary' onClick={() => addPhoneToBasket(phone.id)}>
                 Buy Now!
