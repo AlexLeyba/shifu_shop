@@ -35,3 +35,4 @@ class BasketView(APIView):
         bask.basket.add(prod)
         bask.save()
         return Response("Good")
+

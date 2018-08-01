@@ -9,8 +9,8 @@ class Product(models.Model):
     description = models.TextField('Описание товара', max_length=500)
 
     class Meta:
-        verbose_name = 'Товары'
-        verbose_name_plural = 'Товар'
+        verbose_name = 'Товар'
+        verbose_name_plural = 'Товары'
 
     def __str__(self):
         return self.name
